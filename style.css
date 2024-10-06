@@ -1,0 +1,37 @@
+*{
+    margin : 0px;
+    padding : 0px;
+    box-sizing : border-box;
+}
+html,body{
+    width: 100vw;
+    height:100vh;
+}
+
+.wrapper{
+    border : 1px solid black;
+    width : 90%;
+    max-width : 1536px;
+    height: 100px;
+
+    /* it refes to right and left margin only
+    although 'margin' refers to each direction trbl */
+    margin-inline : auto;
+    position : relative;
+    margin-top : 5rem;
+}
+
+.item{
+    width : 200px;
+    height : 100px;
+    background-color: red;
+    border-radius : 6px;
+    position: absolute;
+
+    /*  we want to put our item outside of the wrapper 
+    by left 100% it touches the border of screen */
+    left : 10px; /* means item is 10px outside of it's parent this is because of position : relative */
+
+    /* same way */
+    left : 100%; /* 100% outside of it's parent */
+}
