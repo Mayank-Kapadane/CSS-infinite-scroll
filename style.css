@@ -21,6 +21,31 @@ html,body{
     margin-top : 5rem;
 }
 
+@keyframes scroll-left{
+    /* we don't need to care about beginning
+    because our divs are already at that position where we want */
+    /* from {
+
+    } */
+
+    /* What we nee to care about is ending */
+    to {
+        left : -200px;
+        /*demostrate, left : -200px; 
+        when we set left : 0% in item see item inside the wrapper and 
+        left : 100% item is outside the wrapper right side
+        now we want item at left side outside the wrapper 
+        our item width is 200px when we do -200px then it completely come outside the wrapper 
+        for that we set left : -200px*/
+
+        /* here the IMP thing is the position of wrapper must be relative 
+        otherwise teh item who has position absolute they will move with repsect to the webpage insted of with repect to(wrt) the wrapper 
+        
+        Note : position : absolute inside relative. then absolute will not work wrt of browser it will move wrt of the parent who has relative */
+
+    }
+}
+
 .item{
     width : 200px;
     height : 100px;
@@ -34,4 +59,9 @@ html,body{
 
     /* same way */
     left : 100%; /* 100% outside of it's parent */
+
+    animation-name: scroll-left;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
