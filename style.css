@@ -19,6 +19,20 @@ html,body{
     margin-inline : auto;
     position : relative;
     margin-top : 5rem;
+
+
+    overflow: hidden;
+    /* so that when item goes ouside the div it will be hidden 
+    content goes outside the container then make it hidden using overflow hidden
+    This is another reason why we set the position of wrapper relative
+    without it the 'overflow:hidden' will not hide the items with the position of absolute */
+
+    /* Note : Elements with position: absolute; or position: fixed; are positioned relative to their nearest positioned ancestor (i.e., an ancestor with a position value of relative, absolute, fixed, or sticky). */
+
+    /* Currently our animation is happenig on all over divs which are stacking up on each other that we don't want
+    we want to animate each div sequentially this will done by adding animation-delay 
+    by adding unique animation delay to each div 
+    each div start animation at different time*/
 }
 
 @keyframes scroll-left{
