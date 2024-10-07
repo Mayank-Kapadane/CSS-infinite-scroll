@@ -1,4 +1,3 @@
-
 /* Theory is easy
 but practicle implementation requires mathematics */
 
@@ -55,16 +54,39 @@ body {
 /* In css we use clac() to do mathematics  */
 
 /* first clac(animation-duration / total no. of div) */
-.item-1 { animation-delay:  calc( 30s / 8 * (8 - 1) * -1 ) ;}  /* -26.25 */
-.item-2 { animation-delay:  calc( 30s / 8 * (8 - 2) * -1 ) ;}  /* -22.5  */
-.item-3 { animation-delay:  calc( 30s / 8 * (8 - 3) * -1 ) ;}
-.item-4 { animation-delay:  calc( 30s / 8 * (8 - 4) * -1 ) ;}
-.item-5 { animation-delay:  calc( 30s / 8 * (8 - 5) * -1 ) ;}
-.item-6 { animation-delay:  calc( 30s / 8 * (8 - 6) * -1 ) ;}
-.item-7 { animation-delay:  calc( 30s / 8 * (8 - 7) * -1 ) ;}  /* -3.75  */
-.item-8 { animation-delay:  calc( 30s / 8 * (8 - 8) * -1 ) ;}  /* 0     */
 
- 
+.item-1 {
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+    background-color: black;
+} /* -26.25 */
+.item-2 {
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+    background-color: red;
+} /* -22.5  */
+.item-3 {
+    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+    background-color: yellow;
+}
+.item-4 {
+    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+    background-color: green;
+}
+.item-5 {
+    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+    background-color: blue;
+}
+.item-6 {
+    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+    background-color: orange;
+}
+.item-7 {
+    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+    background-color: purple;
+} /* -3.75  */
+.item-8 {
+    animation-delay: calc(30s / 8 * (8 - 8) * -1);
+    background-color: bisque;
+} /* 0     */
 
 /* 
 
@@ -87,4 +109,17 @@ negative : -1
 where, n = total no. of elements
        x = element index number 
 
+*/
+
+/* We can do it mannually without a mathematical formula but it takes time and not as much efficient / beautiful as using mathematics */
+
+/* Open demostrate.html to understand the logic in better way 
+A negetive number control from where tha animation start*/
+
+
+
+/* If we don't multiplt with -1
+then all items are right of the screem starts one by one coming 
+but if we multipy with -1 
+then all items are on their positin initially and start moving. which looks good as compare to above 
 */
