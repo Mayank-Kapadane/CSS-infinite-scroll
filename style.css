@@ -8,7 +8,7 @@ but practicle implementation requires mathematics */
 }
 
 .wrapper {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 90%;
     max-width: 1536px;
     height: 100px;
@@ -16,8 +16,10 @@ but practicle implementation requires mathematics */
     margin-inline: auto;
     position: relative;
     margin-top: 5rem;
+    padding-top: 10px;
 
     overflow: hidden;
+
 
 
     /* mask-image property ,
@@ -39,15 +41,26 @@ but practicle implementation requires mathematics */
 }
 
 .item {
-    width: 170px;
-    height: 100px;
+    width: 150px;
+    height: 80px;
     background-color: red;
     border-radius: 6px;
     position: absolute;
 
-    left: 10px;
 
-    left: 100%;
+    /* left : 100% (it is setted accordting to viewport)
+    when i resize the page the 100% will change relative the viewport 
+    and the width of item is constant
+    so let's make it constant also. */
+    left: max(calc(200px * 8), 100%);
+
+    /* Somethimes animation not work well with large screen that's why we need to use max() function */
+    /* Max function gives an argument
+    at any time which is most biggest that will be applied */
+
+
+    /* mk : for small devices pixels are also becomes small 
+    we can put a constant value of 200 px and it will work. */
 
     animation-name: scroll-left;
 
