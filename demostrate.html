@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            position: relative;
+            left: 100%;
+            margin-bottom : 5px;
+
+        }
+        #box1{
+            background-color: crimson;
+            animation : ani 3s linear infinite alternate ;
+            animation-delay: 1.34s;
+        }
+        #box2{
+            background-color: forestgreen;
+            animation : ani 3s linear infinite alternate ;
+            animation-delay: 1s;
+        }
+        @keyframes ani{
+            to{
+                left : 0px;
+            }
+        }
+
+
+        #box3{
+            background-color: yellow;
+            animation : ani 3s linear infinite alternate ;
+
+            /* Here the change is made  */
+            animation-delay: -1.34s;
+        }
+        #box4{
+            background-color: royalblue;
+            animation : ani 3s linear infinite alternate ;
+
+            /* Here the change is made  */
+            animation-delay: -1s;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <hr>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+
+
+    <!-- See 
+    how red and greem move 
+    and  
+    from where the yellow and blue start moving and then keep moving 
+    
+    Here position is relative so element will not overlap on each other and you can see them seprated 
+    
+    But in our index.html we have position : absolute where element were overlap and that create little bit confusion
+    actully not confusing but all elements have same color in index.html so it becomes little bit confusing-->
+</body>
+</html>
