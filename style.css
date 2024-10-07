@@ -6,11 +6,6 @@ but practicle implementation requires mathematics */
     padding: 0px;
     box-sizing: border-box;
 }
-html,
-body {
-    width: 100vw;
-    height: 100vh;
-}
 
 .wrapper {
     border: 1px solid black;
@@ -23,8 +18,20 @@ body {
     margin-top: 5rem;
 
     overflow: hidden;
-}
 
+
+    /* mask-image property ,
+    suppose an "element" wtih star shape
+    and we have 'image' 
+    we want to set the 'image' as background-image of "element" then we use mask-image property */
+
+    /* here we use it to create fade-out effect */
+    /* mk : simple terms we set the bacground of wrapper */
+ 
+
+    /* check learn.md */
+    mask-image: linear-gradient(to right, rgba(0,0,0,0),rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0));
+}
 @keyframes scroll-left {
     to {
         left: -200px;
@@ -32,8 +39,8 @@ body {
 }
 
 .item {
-    width: 12.5rem;
-    height: 6.25rem;
+    width: 170px;
+    height: 100px;
     background-color: red;
     border-radius: 6px;
     position: absolute;
